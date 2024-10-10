@@ -2,6 +2,7 @@ import CustomProvider from "./CustomProvider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Connect from "./components/Connect";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -30,6 +31,7 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<CustomProvider>
+					<Connect />
 					{children}
 				</CustomProvider>
 			</body>
